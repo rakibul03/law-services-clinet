@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner/Banner";
 import HomeServices from "./HomeServices/HomeServices";
 
@@ -30,9 +30,11 @@ const Home = () => {
           ))}
         </div>
         <div className="flex items-center justify-center">
-          <button className="my-2 h-12 rounded bg-deep-purple-accent-400 px-16 py-2 font-medium tracking-widest text-white shadow-lg transition duration-200 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
-            See All
-          </button>
+          <Link to="/services">
+            <button className="my-2 h-12 rounded bg-deep-purple-accent-400 px-16 py-2 font-medium tracking-widest text-white shadow-lg transition duration-200 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+              See All
+            </button>
+          </Link>
         </div>
       </div>
     </div>
