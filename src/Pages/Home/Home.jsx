@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner/Banner";
+import HomeFAQ from "./HomeFAQ";
 import HomeServices from "./HomeServices/HomeServices";
 
 const Home = () => {
   const services = useLoaderData();
   return (
-    <div>
+    <>
       <Banner />
       <div className="mx-auto w-[96%] px-4 py-5 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 ">
         <div className="grid grid-cols-2 pb-14 pt-8">
@@ -36,8 +37,9 @@ const Home = () => {
             </button>
           </Link>
         </div>
+        <HomeFAQ />
       </div>
-    </div>
+    </>
   );
 };
 
