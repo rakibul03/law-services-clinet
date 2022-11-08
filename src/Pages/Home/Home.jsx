@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Banner from "./Banner/Banner";
 import HomeFAQ from "./HomeFAQ";
 import HomeServices from "./HomeServices/HomeServices";
+import Newsletter from "./Newsletter";
 
 const Home = () => {
   const services = useLoaderData();
@@ -38,6 +39,7 @@ const Home = () => {
           </Link>
         </div>
         <HomeFAQ />
+        <Newsletter />
       </div>
     </>
   );
