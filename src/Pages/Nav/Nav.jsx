@@ -54,7 +54,7 @@ const Nav = () => {
                 <>
                   <li>
                     <Link
-                      to="/"
+                      to="/add-services"
                       className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                     >
                       Add Services

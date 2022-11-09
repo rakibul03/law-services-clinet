@@ -88,7 +88,7 @@ const Blog = () => {
               alt=""
             />
             <div className="space-y-2 p-6">
-              <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+              <h3 className="text-2xl font-semibold ">
                 What is the difference between javascript and NodeJS?
               </h3>
               <span className="text-xs dark:dark:text-gray-400">
