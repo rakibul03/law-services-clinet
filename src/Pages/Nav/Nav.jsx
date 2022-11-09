@@ -62,7 +62,7 @@ const Nav = () => {
                   </li>
                   <li>
                     <Link
-                      to="/"
+                      to="/my-review"
                       className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                     >
                       My Reviews
