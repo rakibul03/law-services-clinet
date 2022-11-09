@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
+import Blog from "../Pages/Blog/Blog";
 import Home from "../Pages/Home/Home";
 import ReviewService from "../Pages/Services/ReviewService";
 import Services from "../Pages/Services/Services";
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
         element: <ReviewService />,
         loader: ({ params }) =>
           fetch(`https://services-server.vercel.app/services/${params.id}`),
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
       },
     ],
   },

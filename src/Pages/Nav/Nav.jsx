@@ -31,24 +31,51 @@ const Nav = () => {
               </span>
             </Link>
             <ul className="hidden items-center space-x-8 lg:flex">
+              <>
+                <li>
+                  <Link
+                    to="/"
+                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services"
+                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                  >
+                    Services
+                  </Link>
+                </li>
+              </>
+
+              {user?.uid && (
+                <>
+                  <li>
+                    <Link
+                      to="/"
+                      className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    >
+                      Add Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                    >
+                      My Reviews
+                    </Link>
+                  </li>
+                </>
+              )}
               <li>
                 <Link
-                  to="/"
-                  aria-label="Our product"
-                  title="Our product"
+                  to="/blog"
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
-                  Product
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  aria-label="Our product"
-                  title="Our product"
-                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                >
-                  Features
+                  Blog
                 </Link>
               </li>
             </ul>

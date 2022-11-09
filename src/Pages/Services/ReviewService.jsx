@@ -6,8 +6,28 @@ const ReviewService = () => {
   const { _id, service_name, img, des, service_charge } = service;
 
   return (
-    <div>
-      <h1>This is review for {service_name}</h1>
+    <div className="mx-auto p-5 dark:dark:bg-gray-400 dark:dark:text-gray-100 sm:p-10 md:p-16">
+      <div className="mx-auto flex max-w-3xl flex-col overflow-hidden rounded">
+        <img
+          src={img}
+          alt=""
+          className="h-60 w-full dark:dark:bg-gray-500 sm:h-96"
+        />
+        <div className="m-4 mx-auto -mt-16 space-y-6 p-6 pb-12 dark:dark:bg-gray-800 sm:mx-12 sm:px-10 lg:max-w-2xl lg:rounded-md">
+          <div className="space-y-2">
+            <h1 className="inline-block text-2xl font-semibold sm:text-3xl">
+              {service_name}
+            </h1>
+            <p className="mt-5 pr-4 text-xl font-semibold">
+              <span>Price: </span>
+              <small className="text-gray-400">{service_charge}$</small>
+            </p>
+          </div>
+          <div className="dark:dark:text-gray-100">
+            <p className="text-xl font-light italic">{des}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
