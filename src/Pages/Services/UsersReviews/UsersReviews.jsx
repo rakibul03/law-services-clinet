@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../../../contexts/UserContext";
 import AllUsersReviews from "./AllUsersReviews";
 
-const UsersReviews = ({ id }) => {
+const UsersReviews = ({ id, service_name }) => {
   const { user } = useContext(AuthContext);
   const location = useLocation();
   const [reviews, setReviews] = useState([]);
@@ -15,6 +15,7 @@ const UsersReviews = ({ id }) => {
     const message = e.target.message.value;
     const review = {
       service_id: id,
+      service_name: service_name,
       name: user?.displayName,
       email: user?.email,
       img: user?.photoURL,
