@@ -68,6 +68,7 @@ const UsersReviews = ({ id, service_name }) => {
                 rows="3"
                 name="message"
                 placeholder="Write your reviews here..."
+                required
                 className="h-24 resize-none rounded-md p-4 dark:dark:bg-gray-900 dark:dark:text-gray-100"
               ></input>
               <button
