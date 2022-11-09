@@ -25,7 +25,11 @@ const ServicesUI = ({ service }) => {
           <span className="text-2xl font-bold leading-5">{service_name}</span>
         </h1>
         <h2 className="mb-4 text-gray-700">
-          {des.length > 100 ? <p>{des.slice(0, 100) + "..."}</p> : <p>{des}</p>}
+          {des?.length > 100 ? (
+            <p>{des?.slice(0, 100) + "..."}</p>
+          ) : (
+            <p>{des}</p>
+          )}
         </h2>
         <div className="flex justify-between space-x-4">
           <Link to={`/services/${_id}`}>

@@ -1,7 +1,10 @@
-import React from "react";
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../contexts/UserContext";
+import UsersReviews from "./UsersReviews/UsersReviews";
 
 const ReviewService = () => {
+  const user = useContext(AuthContext);
   const service = useLoaderData();
   const { _id, service_name, img, des, service_charge } = service;
 
@@ -23,11 +26,12 @@ const ReviewService = () => {
               <small className="text-gray-400">{service_charge}$</small>
             </p>
           </div>
-          <div className="dark:dark:text-gray-100">
-            <p className="text-xl font-light italic">{des}</p>
+          <div className=" dark:dark:text-gray-100">
+            <p className="text-xl font-light leading-relaxed ">{des}</p>
           </div>
         </div>
       </div>
+      <UsersReviews id={_id} />
     </div>
   );
 };
