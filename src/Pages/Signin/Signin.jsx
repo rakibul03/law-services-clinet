@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../contexts/UserContext";
+import Spinner from "../Spinner/Spinner";
 
 const SignIn = () => {
-  const { logIn, signInWithGoogle } = useContext(AuthContext);
+  const { logIn, signInWithGoogle, loading } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -41,6 +42,10 @@ const SignIn = () => {
         toast.error(errorMessage);
       });
   };
+
+  if (loading) {
+    return <Spinner />;
+  }
   return (
     <section className="flex min-h-screen items-center justify-center">
       <div className="flex max-w-3xl items-center rounded-2xl bg-[#f2f2f2] p-5 shadow-lg">
