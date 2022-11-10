@@ -17,6 +17,7 @@ const Signup = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
+    const profilePhoto = event.target.profilePhoto.value;
     const password = event.target.password.value;
     const email = event.target.email.value;
 
@@ -26,8 +27,8 @@ const Signup = () => {
         const user = result.user;
         toast.success("Registration Completed Please Signin");
 
-        // Update user name
-        updateUserProfile(name)
+        // Update user name and user profile image
+        updateUserProfile(name, profilePhoto)
           .then()
           .catch((error) => {
             toast.error(error.message);
@@ -73,6 +74,13 @@ const Signup = () => {
               type="text"
               name="name"
               placeholder="Full Name"
+              required
+            />
+            <input
+              className="rounded-xl border p-2"
+              type="url"
+              name="profilePhoto"
+              placeholder="Profile Image link"
               required
             />
             <input
