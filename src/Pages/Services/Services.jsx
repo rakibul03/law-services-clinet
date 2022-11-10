@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/UserContext";
+import useTitle from "../../hooks/useTitle";
 import Spinner from "../Spinner/Spinner";
 import ServicesUI from "./ServicesUI";
 
 const Services = () => {
+  useTitle("Services");
   const services = useLoaderData();
   const { loading } = useContext(AuthContext);
 

@@ -1,6 +1,9 @@
 import React from "react";
+import { toast } from "react-toastify";
+import useTitle from "../../hooks/useTitle";
 
 const AddServices = () => {
+  useTitle("Add Services");
   const handleSubmit = (e) => {
     e.preventDefault();
     const service_name = e.target.servicesName.value;
@@ -24,8 +27,10 @@ const AddServices = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        e.target.reset();
+        if (data.acknowledged) {
+          toast.success("Added Services Successfully");
+          e.target.reset();
+        }
       });
   };
 

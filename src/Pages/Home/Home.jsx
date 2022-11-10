@@ -1,11 +1,13 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 import Banner from "./Banner/Banner";
 import HomeFAQ from "./HomeFAQ";
 import HomeServices from "./HomeServices/HomeServices";
 import Newsletter from "./Newsletter";
 
 const Home = () => {
+  useTitle("Home");
   const services = useLoaderData();
   return (
     <>

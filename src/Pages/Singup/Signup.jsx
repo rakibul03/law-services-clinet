@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../contexts/UserContext";
+import useTitle from "../../hooks/useTitle";
 import Spinner from "../Spinner/Spinner";
 
 const Signup = () => {
@@ -10,6 +11,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+  useTitle("Signup");
 
   // Sign up with email and password
   const handleSubmit = (event) => {

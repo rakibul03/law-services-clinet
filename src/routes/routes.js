@@ -53,7 +53,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/add-services",
-        element: <AddServices />,
+        element: (
+          <PrivateRoutes>
+            <AddServices />
+          </PrivateRoutes>
+        ),
       },
     ],
   },
