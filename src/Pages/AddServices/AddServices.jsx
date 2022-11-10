@@ -16,6 +16,7 @@ const AddServices = () => {
       des: des,
       service_charge: service_charge,
       service_name: service_name,
+      date: new Date(),
     };
 
     fetch("https://services-server.vercel.app/add-services", {
