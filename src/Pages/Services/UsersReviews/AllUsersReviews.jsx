@@ -9,7 +9,7 @@ const AllUsersReviews = ({ singleReview }) => {
         <div className="flex space-x-4">
           <div>
             <img
-              src={img}
+              src={img ? img : "https://bit.ly/3TriYyn"}
               alt=""
               className="h-12 w-12 rounded-full object-cover dark:dark:bg-gray-500"
             />

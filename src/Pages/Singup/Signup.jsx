@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../contexts/UserContext";
 import useTitle from "../../hooks/useTitle";
+import { jwtToke } from "../../utilities/JWT";
 import Spinner from "../Spinner/Spinner";
 
 const Signup = () => {
@@ -46,6 +47,7 @@ const Signup = () => {
     signInWithGoogle()
       .then((result) => {
         const user = result.user;
+        jwtToke(user);
         navigate(from, { replace: true });
         toast.success(`SignUp Successful ${user.displayName}`);
       })

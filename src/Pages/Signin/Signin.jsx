@@ -39,6 +39,7 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         toast.success(`Signin Successful ${user.displayName}`);
+        jwtToke(user);
         navigate(from, { replace: true });
       })
       .catch((error) => {
