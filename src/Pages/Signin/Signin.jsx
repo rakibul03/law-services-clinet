@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../contexts/UserContext";
 import useTitle from "../../hooks/useTitle";
+import { jwtToke } from "../../utilities/JWT";
 import Spinner from "../Spinner/Spinner";
 
 const SignIn = () => {
@@ -23,6 +24,7 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         toast.success(`Signin Successful ${user.displayName}`);
+        jwtToke(user);
         event.target.reset();
         navigate(from, { replace: true });
       })
