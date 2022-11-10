@@ -1,6 +1,7 @@
 import React from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const MyReviewsUI = ({ reviews, handleDelete }) => {
   const { _id, service_name, review } = reviews;
@@ -15,6 +16,7 @@ const MyReviewsUI = ({ reviews, handleDelete }) => {
           >
             <MdDeleteForever />
           </button>
+
           <button className="text-xl text-green-500">
             <FiEdit />
           </button>
