@@ -18,7 +18,7 @@ const Newsletter = () => {
               className="w-full border border-white bg-transparent p-4 text-base font-medium leading-none text-white placeholder-white focus:outline-none sm:border-transparent"
               placeholder="Email Address"
             />
-            <button className="w-full rounded-r-md border border-white bg-white py-4 px-6 hover:bg-opacity-75 focus:outline-none focus:ring focus:ring-offset-2 sm:w-auto sm:border-transparent">
+            <button className="w-full border border-white bg-white py-4 px-6 hover:bg-opacity-75 focus:outline-none focus:ring focus:ring-offset-2 sm:w-auto sm:rounded-r-md sm:border-transparent">
               Subscribe
             </button>
           </div>

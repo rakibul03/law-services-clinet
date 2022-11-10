@@ -36,7 +36,13 @@ const MyReviews = () => {
   };
   return (
     <>
-      {allReview.length > 0 ? (
+      {allReview.length <= 0 ? (
+        <div className="flex min-h-screen items-center justify-center">
+          <p className="text-2xl  font-bold uppercase tracking-widest drop-shadow-[4px_4px_4px_#000] sm:text-5xl">
+            No reviews were added
+          </p>
+        </div>
+      ) : (
         <div className="mx-auto min-h-screen w-[96%] p-2 text-gray-100  sm:p-8  lg:max-w-screen-xl">
           <h2 className="mb-4 text-center  text-3xl  font-bold leading-tight text-black">
             All Of Your Reviews
@@ -59,12 +65,6 @@ const MyReviews = () => {
               handleDelete={handleDelete}
             />
           ))}
-        </div>
-      ) : (
-        <div className="flex min-h-screen items-center justify-center">
-          <p className="text-2xl  font-bold uppercase tracking-widest drop-shadow-[4px_4px_4px_#000] sm:text-5xl">
-            No reviews were added
-          </p>
         </div>
       )}
     </>

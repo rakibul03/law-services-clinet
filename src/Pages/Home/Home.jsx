@@ -13,16 +13,16 @@ const Home = () => {
     <>
       <Banner />
       <div className="mx-auto w-[96%] px-4 py-5 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 ">
-        <div className="grid grid-cols-2 pb-14 pt-8">
-          <h1 className=" grid ">
-            <span className="text-4xl font-bold tracking-wider">
+        <div className="grid grid-cols-1 pb-14 pt-8 sm:grid-cols-2">
+          <h1 className="grid pb-10 sm:pb-0">
+            <span className="text-3xl font-bold tracking-wider sm:text-4xl">
               Services & Pricing
             </span>
-            <span className="text-3xl font-semibold italic text-gray-500">
+            <span className="text-2xl font-semibold italic text-gray-500 sm:text-3xl">
               Our Specialization
             </span>
           </h1>
-          <p className="border-l-8 border-indigo-400 pl-10 text-xl italic text-gray-600">
+          <p className="border-l-8 border-indigo-400 pl-8 text-xl italic text-gray-600 sm:pl-10">
             In 2012 we started providing our services under the Rakib trademark.
             A few years later we were among the leaders in the field of
             corporate consulting and corporate services.

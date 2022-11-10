@@ -21,12 +21,12 @@ const Footer = () => {
             </Link>
             <div className="mt-6 lg:max-w-sm">
               <p className="text-sm text-gray-800">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+                In 2012 we started providing our services under the Rakib
+                trademark.
               </p>
               <p className="mt-4 text-sm text-gray-800">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
+                A few years later we were among the leaders in the field of
+                corporate consulting and corporate services.
               </p>
             </div>
           </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                 title="Our phone"
                 className="text-deep-purple-accent-400 transition-colors duration-300 hover:text-deep-purple-800"
               >
-                850-123-5021
+                836-062-7456
               </a>
             </div>
             <div className="flex">
@@ -53,7 +53,7 @@ const Footer = () => {
                 title="Our email"
                 className="text-deep-purple-accent-400 transition-colors duration-300 hover:text-deep-purple-800"
               >
-                info@lorem.mail
+                info@bitelegal.com
               </a>
             </div>
             <div className="flex">
@@ -66,7 +66,7 @@ const Footer = () => {
                 title="Our address"
                 className="text-deep-purple-accent-400 transition-colors duration-300 hover:text-deep-purple-800"
               >
-                312 Lovely Street, NY
+                Plot 9 & 10 LPU, IND
               </a>
             </div>
           </div>
@@ -101,42 +101,12 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-            <p className="mt-4 text-sm text-gray-500">
-              Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-              spare ribs salami.
-            </p>
           </div>
         </div>
-        <div className="flex flex-col-reverse justify-between border-t pt-5 pb-10 lg:flex-row">
+        <div className="flex flex-col-reverse justify-between border-t  pb-10 lg:flex-row">
           <p className="text-sm text-gray-600">
-            © Copyright 2020 Lorem Inc. All rights reserved.
+            © Copyright 2022 Bite Legal Inc. All rights reserved.
           </p>
-          <ul className="mb-3 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-5 lg:mb-0">
-            <li>
-              <a
-                href="/"
-                className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-              >
-                F.A.Q
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-              >
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
-              >
-                Terms &amp; Conditions
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>

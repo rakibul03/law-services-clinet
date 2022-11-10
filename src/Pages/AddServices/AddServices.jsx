@@ -35,13 +35,13 @@ const AddServices = () => {
   };
 
   return (
-    <section className=" min-h-screen p-6 px-8 dark:dark:dark:bg-gray-800 dark:dark:dark:text-gray-50">
+    <section className=" min-h-screen p-6 px-8 dark:dark:dark:bg-gray-600 dark:dark:dark:text-gray-50">
       <p className="mt-10 text-center text-4xl font-semibold">
         Add Your Services Here
       </p>
       <form onSubmit={handleSubmit}>
         <fieldset
-          className="mx-auto mt-16 grid w-[96%] grid-cols-4 gap-6 rounded-md py-4 px-4 shadow-sm dark:dark:dark:bg-gray-900 sm:max-w-xl sm:place-items-end sm:py-20 sm:pl-10
+          className="mx-auto mt-16 grid w-[96%] grid-cols-4 gap-6 rounded-md py-4 px-4 shadow-sm dark:dark:dark:bg-gray-800 sm:max-w-xl sm:place-items-end sm:py-20 sm:pl-10
           md:max-w-full md:px-24 lg:max-w-screen-xl"
         >
           <div className="col-span-full grid grid-cols-6 gap-4 lg:col-span-3">
