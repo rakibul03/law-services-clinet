@@ -7,7 +7,26 @@ const AddServices = () => {
     const service_charge = e.target.price.value;
     const img = e.target.imageURL.value;
     const des = e.target.servicesDescription.value;
-    console.log(img, des, service_charge, service_name);
+
+    const services = {
+      img: img,
+      des: des,
+      service_charge: service_charge,
+      service_name: service_name,
+    };
+
+    fetch("https://services-server.vercel.app/add-services", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(services),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        e.target.reset();
+      });
   };
 
   return (
